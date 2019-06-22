@@ -10,7 +10,7 @@ This script creates a local backup of txt files, one for each of your entries on
 1. Install [httparty](https://github.com/jnunemaker/httparty): `gem install httparty`
 1. Run `ruby 200wad.rb`!
 
-The script safely removes old backups. Edit `next if item == '.' or item == '..' or item == '.DS_Store'` appropriately, as it assumes a Mac filesystem.
+The script safely removes old backups. Edit `next if item == '.' or item == '..' or item == '.DS_Store'` appropriately, as it assumes a Mac filesystem, **and that no other folders except generated backups exist in the root folder**.
 
 It also strips markup, converting paragraphs and blockquotes. For example:
 
@@ -37,3 +37,5 @@ cillum dolore eu fugiat nulla pariatur.
 ## Todo
 
 - Convert links into footnotes
+- Make deleting old backups a optional flag
+- Make deleting safer
