@@ -7,6 +7,8 @@ This script creates a local backup of txt files, one for each of your entries on
     API_KEY = '[your api key from 200wad]'
     ```
 1. Update `root_dir` to be the local directory you want your backup to live
+1. Install [httparty](https://github.com/jnunemaker/httparty): `gem install httparty`
+1. Run `ruby 200wad.rb`!
 
 The script safely removes old backups. Edit `next if item == '.' or item == '..' or item == '.DS_Store'` appropriately, as it assumes a Mac filesystem.
 
