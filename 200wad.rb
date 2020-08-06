@@ -8,13 +8,13 @@ require 'fileutils'
 load 'api_key.rb'
 
 # make new directory for this export
-root_dir = "/Users/danielmiller/Dropbox (Personal)/writing/200wad/"
+root_dir = "/home/daniel/Documents/cowriters-backup/"
 current_folder = Time.now.to_s.split(" ")[0]
 new_dir = root_dir + current_folder + "/"
 FileUtils.mkdir_p new_dir unless Dir.exists?(new_dir)
 
 begin
-  url = 'https://200wordsaday.com/api/texts?api_key=' + API_KEY
+  url = 'https://cowriters.app/api/texts?api_key=' + API_KEY
   response = HTTParty.get(url)
   entries = response.parsed_response
   puts entries.length.to_s + " entries read from API"
